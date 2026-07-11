@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Creativepage — an interactive home for playful learning downloads, printable activities and illustrated projects."
+  />
+
+  <title>Creativepage</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="site-noise" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       INTRO / ZOOM-OUT BORDER
+       ========================================================= -->
+  <div class="intro-screen" id="introScreen" aria-hidden="true">
+    <div class="intro-frame">
+      <div class="intro-mark intro-mark--one"></div>
+      <div class="intro-mark intro-mark--two"></div>
+      <div class="intro-mark intro-mark--three"></div>
+      <div class="intro-mark intro-mark--four"></div>
+      <div class="intro-title">
+        <span>CREATIVE</span>
+        <strong>PAGE</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       CUSTOM CURSOR
+       ========================================================= -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       DECORATIVE FLOATING PLACEHOLDERS
+       Replace these with transparent PNG illustrations later.
+       ========================================================= -->
+  <div class="floating-art" aria-hidden="true">
+    <div class="float-shape float-shape--circle" data-speed="0.035"></div>
+    <div class="float-shape float-shape--star" data-speed="0.05">✦</div>
+    <div class="float-shape float-shape--blob" data-speed="0.025"></div>
+    <div class="float-shape float-shape--triangle" data-speed="0.045"></div>
+    <div class="float-shape float-shape--scribble" data-speed="0.06">~~~~</div>
+    <div class="float-shape float-shape--flower" data-speed="0.03">✿</div>
+  </div>
+
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Creativepage home">
+      <span class="logo-mark">✦</span>
+      <span>Creativepage</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mainNav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Open menu</span>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- =======================================================
+         HERO
+         ======================================================= -->
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">A tiny illustrated universe of useful things</p>
+
+        <h1>
+          Learn.
+          <span class="outlined-word">Make.</span>
+          Play.
+        </h1>
+
+        <p class="hero-intro">
+          Explore creative learning projects, printable activities and
+          delightfully odd little downloads made for classrooms, homes,
+          holidays and curious minds.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button--dark magnetic" href="#projects">
+            Explore the projects
+            <span aria-hidden="true">↘</span>
+          </a>
+
+          <a class="text-link magnetic" href="#downloads">
+            Jump to downloads
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-stage" id="heroStage" aria-label="Interactive illustration">
+        <div class="hero-sun doodle">☼</div>
+
+        <div class="hero-cloud hero-cloud--one doodle">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="hero-cloud hero-cloud--two doodle">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="hero-island">
+          <div class="island-flag">PLAY</div>
+          <div class="island-door"></div>
+          <div class="island-window"></div>
+        </div>
+
+        <button
+          class="hero-creature hero-creature--fish"
+          type="button"
+          aria-label="Make the fish swim"
+        >
+          <span class="fish-body"></span>
+          <span class="fish-tail"></span>
+          <span class="fish-eye"></span>
+        </button>
+
+        <button
+          class="hero-creature hero-creature--jelly"
+          type="button"
+          aria-label="Make the jellyfish wiggle"
+        >
+          <span class="jelly-head"></span>
+          <span class="jelly-leg"></span>
+          <span class="jelly-leg"></span>
+          <span class="jelly-leg"></span>
+        </button>
+
+        <div class="hero-wave hero-wave--one"></div>
+        <div class="hero-wave hero-wave--two"></div>
+        <div class="hero-wave hero-wave--three"></div>
+
+        <p class="hero-stage-note">Poke things. They enjoy the attention.</p>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         MARQUEE
+         ======================================================= -->
+    <section class="marquee-strip" aria-label="Creative categories">
+      <div class="marquee-track">
+        <span>PRINTABLES</span>
+        <span>✦</span>
+        <span>COLOURING</span>
+        <span>✦</span>
+        <span>CLASSROOM IDEAS</span>
+        <span>✦</span>
+        <span>ACTIVITY SHEETS</span>
+        <span>✦</span>
+        <span>SEASONAL FUN</span>
+        <span>✦</span>
+
+        <span>PRINTABLES</span>
+        <span>✦</span>
+        <span>COLOURING</span>
+        <span>✦</span>
+        <span>CLASSROOM IDEAS</span>
+        <span>✦</span>
+        <span>ACTIVITY SHEETS</span>
+        <span>✦</span>
+        <span>SEASONAL FUN</span>
+        <span>✦</span>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         PROJECTS / FOLDING PANELS
+         ======================================================= -->
+    <section class="projects section-shell" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Choose your strange little doorway</p>
+        <h2>Creative worlds</h2>
+        <p>
+          Each project opens into its own collection of activities,
+          printable resources and illustrated nonsense.
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <!-- CREATIVE COVE -->
+        <article class="project-card project-card--cove">
+          <button
+            class="project-card__front"
+            type="button"
+            aria-expanded="false"
+            aria-controls="covePanel"
+          >
+            <span class="project-number">01</span>
+
+            <span class="project-graphic project-graphic--cove" aria-hidden="true">
+              <span class="mini-sun">☼</span>
+              <span class="mini-wave"></span>
+              <span class="mini-fish"></span>
+              <span class="mini-shell"></span>
+            </span>
+
+            <span class="project-copy">
+              <span class="project-kicker">Ocean learning</span>
+              <strong>Creative Cove</strong>
+              <span>
+                Marine creatures, beach activities, reef discoveries and
+                printable underwater chaos.
+              </span>
+            </span>
+
+            <span class="project-open">
+              Open
+              <span aria-hidden="true">＋</span>
+            </span>
+          </button>
+
+          <div class="project-panel" id="covePanel" hidden>
+            <div class="project-panel__inner">
+              <div>
+                <p class="project-panel__label">Inside the Cove</p>
+                <h3>Swim through printable ocean activities.</h3>
+              </div>
+
+              <div class="project-panel__links">
+                <a
+                  href="https://drive.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Whale colouring page
+                  <span>PDF ↗</span>
+                </a>
+
+                <a
+                  href="https://drive.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Reef creature activity sheet
+                  <span>PDF ↗</span>
+                </a>
+
+                <a
+                  href="https://drive.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ocean alphabet poster
+                  <span>PDF ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CREATIVE CLASSROOM -->
+        <article class="project-card project-card--classroom">
+          <button
+            class="project-card__front"
+            type="button"
+            aria-expanded="false"
+            aria-controls="classroomPanel"
+          >
+            <span class="project-number">02</span>
+
+            <span
+              class="project-graphic project-graphic--classroom"
+              aria-hidden="true"
+            >
+              <span class="mini-pencil"></span>
+              <span class="mini-book"></span>
+              <span class="mini-star">✦</span>
+              <span class="mini-circle"></span>
+            </span>
+
+            <span class="project-copy">
+              <span class="project-kicker">Make learning weird</span>
+              <strong>Creative Classroom</strong>
+              <span>
+                Teacher-ready activities, clever worksheets and playful
+                educational printouts.
+              </span>
+            </span>
+
+            <span class="project-open">
+              Open
+              <span aria-hidden="true">＋</span>
+            </span>
+          </button>
+
+          <div class="project-panel" id="classroomPanel" hidden>
+            <div class="project-panel__inner">
+              <div>
+                <p class="project-panel__label">Inside the Classroom</p>
+                <h3>Useful resources without the beige misery.</h3>
+              </div>
+
+              <div class="project-panel__links">
+                <a
+                  href="https://drive.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Creative writing prompts
+                  <span>PDF ↗</span>
+                </a>
+
+                <a
+                  href="https://drive.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Make-your-own creature worksheet
+                  <span>PDF ↗</span>
+                </a>
+
+                <a
+                  href="https://drive.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Classroom creativity pack
+                  <span>PDF ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CREATIVE CHRISTMAS -->
+        <article class="project-card project-card--christmas">
+          <button
+            class="project-card__front"
+            type="button"
+            aria-expanded="false"
+            aria-controls="christmasPanel"
+          >
+            <span class="project-number">03</span>
+
+            <span
+              class="project-graphic project-graphic--christmas"
+              aria-hidden="true"
+            >
+              <span class="mini-tree"></span>
+              <span class="mini-bauble"></span>
+              <span class="mini-gift"></span>
+              <span class="mini-spark">✦</span>
+            </span>
+
+            <span class="project-copy">
+              <span class="project-kicker">Festive foolishness</span>
+              <strong>Creative Christmas</strong>
+              <span>
+                Decorations, colour-ins, holiday activities and printable
+                festive mayhem.
+              </span>
+            </span>
+
+            <span class="project-open">
+              Open
+              <span aria-hidden="true">＋</span>
+            </span>
+          </button>
+
+          <div class="project-panel" id="christmasPanel" hidden>
+            <div class="project-panel__inner">
+              <div>
+                <p class="project-panel__label">Inside Christmas</p>
+                <h3>Festive printables with actual personality.</h3>
+              </div>
+
+              <div class="project-panel__links">
+                <a
+                  href="https://drive.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Colour-your-own ornaments
+                  <span>PDF ↗</span>
+                </a>
+
+                <a
+                  href="https://drive.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Christmas creature cards
+                  <span>PDF ↗</span>
+                </a>
+
+                <a
+                  href="https://drive.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Printable gift tags
+                  <span>PDF ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         DOWNLOADS
+         ======================================================= -->
+    <section class="downloads section-shell" id="downloads">
+      <div class="section-heading section-heading--split">
+        <div>
+          <p class="eyebrow">Print, scribble, cut, destroy tastefully</p>
+          <h2>Featured downloads</h2>
+        </div>
+
+        <p>
+          Swap each placeholder link below for a Google Drive share link.
+          Set Drive access to “Anyone with the link.”
+        </p>
+      </div>
+
+      <div class="download-grid">
+        <article class="download-card tilt-card">
+          <div class="download-preview download-preview--whale">
+            <span class="placeholder-whale"></span>
+            <span class="preview-label">PDF</span>
+          </div>
+
+          <div class="download-card__body">
+            <div>
+              <p>Creative Cove</p>
+              <h3>Wonderful Whale Colour-In</h3>
+            </div>
+
+            <a
+              class="download-button magnetic"
+              href="https://drive.google.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download
+              <span>↓</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="download-card tilt-card">
+          <div class="download-preview download-preview--creature">
+            <span class="placeholder-creature"></span>
+            <span class="preview-label">PDF</span>
+          </div>
+
+          <div class="download-card__body">
+            <div>
+              <p>Creative Classroom</p>
+              <h3>Invent a Ridiculous Creature</h3>
+            </div>
+
+            <a
+              class="download-button magnetic"
+              href="https://drive.google.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download
+              <span>↓</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="download-card tilt-card">
+          <div class="download-preview download-preview--tree">
+            <span class="placeholder-tree"></span>
+            <span class="preview-label">PDF</span>
+          </div>
+
+          <div class="download-card__body">
+            <div>
+              <p>Creative Christmas</p>
+              <h3>Build a Bonkers Christmas Tree</h3>
+            </div>
+
+            <a
+              class="download-button magnetic"
+              href="https://drive.google.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download
+              <span>↓</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         LARGE IMAGE / ILLUSTRATION PLACEHOLDER
+         ======================================================= -->
+    <section class="illustration-break section-shell">
+      <div class="illustration-break__frame">
+        <div class="illustration-landscape" aria-hidden="true">
+          <span class="landscape-sun"></span>
+          <span class="landscape-hill landscape-hill--one"></span>
+          <span class="landscape-hill landscape-hill--two"></span>
+          <span class="landscape-house"></span>
+          <span class="landscape-tree landscape-tree--one"></span>
+          <span class="landscape-tree landscape-tree--two"></span>
+          <span class="landscape-river"></span>
+        </div>
+
+        <div class="illustration-break__caption">
+          <p>Illustration space</p>
+          <span>
+            Replace this entire placeholder with one of your wide PNG or
+            WebP illustrations.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         ABOUT
+         ======================================================= -->
+    <section class="about section-shell" id="about">
+      <div class="about-badge" aria-hidden="true">
+        <span>MAKE</span>
+        <span>PRINT</span>
+        <span>PLAY</span>
+      </div>
+
+      <div class="about-copy">
+        <p class="eyebrow">About Creativepage</p>
+        <h2>A cheerful little factory for creative learning.</h2>
+
+        <p>
+          Creativepage is a home for illustrated downloads, educational
+          activities and printable projects designed to make learning feel
+          less like paperwork and more like discovering a secret island.
+        </p>
+
+        <a class="button button--outline magnetic" href="mailto:hello@example.com">
+          Say hello
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div>
+      <a class="logo logo--footer" href="#top">
+        <span class="logo-mark">✦</span>
+        <span>Creativepage</span>
+      </a>
+
+      <p>Made with pencils, pixels and unreasonable enthusiasm.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#projects">Projects</a>
+      <a href="#downloads">Downloads</a>
+      <a href="mailto:hello@example.com">Contact</a>
+    </div>
+
+    <p class="copyright">
+      © <span id="currentYear"></span> Creativepage
+    </p>
+  </footer>
+</body>
+</html>
