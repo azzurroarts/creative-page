@@ -1877,3 +1877,33 @@ svg {
   object-fit: contain;
   object-position: left center;
 }
+
+.click-burst {
+  position: fixed;
+  z-index: 99999;
+  pointer-events: none;
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  animation: clickBurst 900ms cubic-bezier(.16, 1, .3, 1) forwards;
+}
+
+@keyframes clickBurst {
+  0% {
+    opacity: 1;
+    transform:
+      translate(-50%, -50%)
+      translate(0, 0)
+      rotate(0deg)
+      scale(.4);
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translate(-50%, -50%)
+      translate(var(--burst-x), var(--burst-y))
+      rotate(var(--burst-rotate))
+      scale(1.4);
+  }
+}
