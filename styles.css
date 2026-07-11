@@ -1843,3 +1843,9 @@ svg {
     display: none;
   }
 }
+
+.feature-illustration{
+    display:block;
+    width:100%;
+    height:auto;
+}
