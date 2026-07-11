@@ -22,6 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
    ========================================================= */
 
 function initIntro() {
+   window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "instant"
+});
+   
   const introScreen = document.getElementById("introScreen");
 
   if (!introScreen) return;
