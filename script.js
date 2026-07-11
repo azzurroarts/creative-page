@@ -38,6 +38,7 @@ function initIntro() {
   }
 
   window.setTimeout(() => {
+     
     introScreen.style.transition =
       "opacity 0.8s ease, transform 1.1s cubic-bezier(0.16, 1, 0.3, 1)";
     introScreen.style.opacity = "0";
@@ -45,9 +46,10 @@ function initIntro() {
     introScreen.classList.add("is-complete");
   }, 2750);
 
-  window.setTimeout(() => {
+window.setTimeout(() => {
     introScreen.remove();
-  }, 3900);
+    window.scrollTo(0, 0);
+}, 3900);
 }
 
 /* =========================================================
